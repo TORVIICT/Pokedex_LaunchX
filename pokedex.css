@@ -28,9 +28,9 @@ body {
     align-items: center;
 }
 
-#pantalla {
+#abilities {
 
-    background-color: rgb(255, 255, 255);
+    background-color: #30fb05;
     position: absolute;
     top: 32.6%;
     left: 54.8%;
@@ -72,11 +72,20 @@ body {
     border: 2px solid #f44336;
   }
   
-  .botonBuscar:hover {
+.botonBuscar:hover {
     background-color: #f44336;
     color: white;
-  }
+}
 
+.pantallaHabilidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 30px;
+    
+}
 
 
 
