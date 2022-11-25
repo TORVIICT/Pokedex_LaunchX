@@ -28,9 +28,9 @@ body {
     align-items: center;
 }
 
-#abilities {
+#pantallaSegunda {
 
-    background-color: #30fb05;
+    background-color: rgb(70, 130, 92);
     position: absolute;
     top: 32.6%;
     left: 54.8%;
@@ -85,6 +85,29 @@ body {
     flex-direction: column;
     font-size: 30px;
     
+}
+
+.tituloHabilidades > h1 {
+    font-size: 10px;
+}
+
+
+/*todo lo demas*/
+
+.abilities-cont{
+    background: #f44336;
+}
+
+
+.abilities-cont{
+    justify-content:  center;
+    margin: 5px 4px 0 4px;  
+}
+
+.stats-cont{
+    display: flex;
+    margin-top: 28px;
+    margin-left: 15px;
 }
 
 
