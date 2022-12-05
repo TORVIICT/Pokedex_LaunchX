@@ -17,19 +17,23 @@
         
         <h1>Pokedex LaunchX</h1>
         <input type="text" placeholder="Nombre Pokemon" id="pokeName" name="pokeName">
-        <img src="./src/img_display/pokeball.gif" alt="Pokemon" id="pokeImg" width="250px">
+        <img src="./src/img_display/pokeball.gif" alt="Pokemon" id="pokeImg" width="200px">
+        <div class="pokemonInfo">
+        <span id="namePokemon"></span>
+        <span id="typePokemon"></span>
+        </div>
         <button onclick="fetchPokemon()" class="botonBuscar">Buscar Pokemon</button>
 
     </div>
 
-    <div id="pantallaSegunda" class="pantallaHabilidades">
+    <div id="pantallaSegunda" className="pantallaHabilidades">
 
-        <h1 class="tituloHabilidades">Habilidades</h1>
+        <h1 className="tituloHabilidades">Habilidades</h1>
         <span id="abilities">........</span>
 
 
 
-        <h1 class="tituloHabilidades">Estadisticas</h1>
+        <h1 className="tituloEstadisticas">Estadisticas</h1>
         <span id="stats">........</span>
 
 

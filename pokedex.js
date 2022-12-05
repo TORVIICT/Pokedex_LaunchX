@@ -38,14 +38,13 @@ const fetchPokemon = () => {
             let pokeStat = data.stats;
             pokeImage(pokeImg);
             pokeData(pokeInfo);
-            pokeImage(pokeImg);
             pokeNam(pname);
-            pokeId(pid);
-            pWeight(pweight);
-            pokeHeight(pheight);
-            pExperience(pexperience);
-            pokeInfo(pokeType);
+            pokeLement(pokeType);
             pokeSt(pokeStat);
+            //pokeId(pid);
+            //pWeight(pweight);
+            //pokeHeight(pheight);
+            //pExperience(pexperience);
             console.log(pokeImg);
         }
     });
@@ -60,17 +59,39 @@ const pokeData = (abilites) => {
     const pokeAbilities = document.getElementById('abilities');
     const abilitiesName = abilites.map((item) => item.ability.name);
     pokeAbilities.innerHTML =">"+ abilitiesName[0]+"<br>"+">"+abilitiesName[1]+"<br>"+">"+abilitiesName[2];
-    document.getElementByClassName('pantallaHabilidades' + 'tituloHabilidades');
+    document.getElementsByClassName('pantallaHabilidades' + 'tituloHabilidades');
 };
 
+const pokeSt = (contStats) => {
+    const pokeStats = document.getElementById('stats');
+    const statsName = contStats.map(item => item.stat.name);
+    const statsNumber =contStats.map(item => item.base_stat);
+    pokeStats.innerHTML =">"+statsName[0]+":"+statsNumber[0]+"<br>"+">"+statsName[1]+":"+statsNumber[1]+"<br>"+">"+
+    statsName[2]+":"+statsNumber[2]+"<br>"+">"+statsName[5]+":"+statsNumber[5]+"<br>"+">"+statsName[3]+":"+statsNumber[3]+"<br>"+
+    ">"+statsName[4]+":"+statsNumber[4];
+    document.getElementsByClassName('pantallaHabilidades' + 'tituloEstadisticas');
+};
+
+const pokeNam = (names) => {
+    const nameScreen = document.getElementById('namePokemon');
+    nameScreen.innerHTML = names;
+    document.getElementsByClassName('pokemonInfo');
+};
+
+const pokeLement = (types) => {
+    const pokeTypes = document.getElementById("typePokemon");
+    const typesName = types.map(item => item.type.name);
+    pokeTypes.innerHTML ="Type : "+ typesName[0]+"\n"+","+typesName[1];
+    document.getElementsByClassName('pokemonInfo');
+};
+
+
+/*
 const pokeId = (id) => {
     const idScreen = document.getElementById('id-pokemon');
     idScreen.innerHTML =  `#${id}`;
 }
-const pokeNam = (names) => {
-    const nameScreen = document.getElementById('name-pokemon');
-    nameScreen.innerHTML = names;
-}
+
 const pWeight = (w) => {
     const pokeweight = document.getElementById('weight');
     pokeweight.innerHTML = `Weight: ${w / 10}kg`;
@@ -83,16 +104,4 @@ const pExperience = (exp) => {
     const pokeBase = document.getElementById("bExperience"); 
     pokeBase.innerHTML = `Experience: ${exp}`;
 }
-const pokeInfo = (types) => {
-    const pokeTypes = document.getElementById("type");
-    const typesName = types.map(item => item.type.name);
-    pokeTypes.innerHTML ="Type : "+ typesName[0]+"\n"+","+typesName[1];
-
-}
-const pokeSt = (contStats) => {
-    const pokeStats = document.getElementById("stats");
-    const statsName = contStats.map(item => item.stat.name);
-    const statsNumber =contStats.map(item => item.base_stat);
-    pokeStats.innerHTML =">"+statsName[0]+":"+statsNumber[0]+"<br>"+">"+statsName[1]+":"+statsNumber[1]+"<br>"+">"+
-    statsName[2]+":"+statsNumber[2]+"<br>"+">"+statsName[5]+":"+statsNumber[5]+"<br>"+">"+statsName[3]+":"+statsNumber[3]+"<br>"+
-    ">"+statsName[4]+":"+statsNumber[4]};
+*/
